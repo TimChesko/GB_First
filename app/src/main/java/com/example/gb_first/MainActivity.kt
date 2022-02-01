@@ -17,8 +17,10 @@ class MainActivity : AppCompatActivity() {
         val student = Human("Тима", 18)
         val name: TextView = findViewById(R.id.name) as TextView
         val age: TextView = findViewById(R.id.age) as TextView
-        name.text = student.name
-        age.text = student.age.toString()
+        val objectView = object {
+            val Hume1 = student.copy()
+        }
+        age.text = objectView.Hume1.toString()
 
     }
 
